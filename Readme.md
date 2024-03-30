@@ -61,4 +61,4 @@ Contributions to the project are welcome! If you have any suggestions, bug fixes
 
 ## Contact
 
-For any inquiries or support, please contact us at vinaychandramola4@example.com. We're here to help!
+For any inquiries or support, please contact us at vinaychandramola4@gmail.com. We're here to help!
