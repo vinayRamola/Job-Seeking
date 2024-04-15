@@ -18,7 +18,15 @@ app.use(
         method: ["GET", "POST", "DELETE", "PUT"],
         credentials: true,
         })
-    );
+);
+
+app.use(
+  cors({
+      origin: ["https://deploy-mern-1whq.vercel.app"],
+      method: ["GET", "POST", "DELETE", "PUT"],
+      credentials: true,
+      })
+);
 
 app.use(cookieParser());
 app.use(express.json());
