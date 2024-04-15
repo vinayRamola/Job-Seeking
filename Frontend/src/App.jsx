@@ -23,7 +23,7 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "https://job-seeking-five.vercel.app/",
+          "https://job-seeking-five.vercel.app/getuser",
           {
             withCredentials: true,
           }
