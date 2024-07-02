@@ -26,7 +26,6 @@ const App = () => {
           "https://job-seeking-5xut.vercel.app/",
           {
             headers: {
-              // "Access-Control-Allow-Origin": "https://job-seeking-black.vercel.app",
               "Access-Control-Allow-Methods": "GET, POST, DELETE, PUT",
             },
             withCredentials: true,
