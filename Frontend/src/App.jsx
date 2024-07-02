@@ -23,11 +23,8 @@ const App = () => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          "https://job-seeking-5xut.vercel.app/",
+          "https://job-seeking-5xut.vercel.app",
           {
-            headers: {
-              "Access-Control-Allow-Methods": "GET, POST, DELETE, PUT",
-            },
             withCredentials: true,
           }
         );

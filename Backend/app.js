@@ -22,15 +22,14 @@ dotenv.config({ path: "./config/.env" });
 
 app.use(
   cors({
-      origin: ["https://job-seeking-black.vercel.app/login"],
+      origin: ["https://job-seeking-s5o4-frontend.vercel.app"],
       method: ["GET", "POST", "DELETE", "PUT"],
       credentials: true,
       })
 );
 app.get("/",(req,res) => {
-  res.json("Hello");
+  res.json("Hello")
 })
-
 app.use(cookieParser());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}))
