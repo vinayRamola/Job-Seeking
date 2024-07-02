@@ -22,7 +22,7 @@ dotenv.config({ path: "./config/.env" });
 
 app.use(
   cors({
-      origin: ["https://job-seeking-s5o4-frontend.vercel.app/login"],
+      origin: ["job-seeking-r7l42i3tf-vinayramolas-projects.vercel.app"],
       method: ["GET", "POST", "DELETE", "PUT"],
       credentials: true,
       })
