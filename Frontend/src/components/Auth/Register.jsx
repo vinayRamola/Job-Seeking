@@ -8,6 +8,7 @@ import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Context } from "../../main";
+const apiUrl = process.env.REACT_APP_API_URL;
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -22,7 +23,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        "http://localhost:4000/api/v1/user/register",
+        `${apiUrl}/api/v1/user/register`,
         { name, phone, email, role, password },
         {
           headers: {
