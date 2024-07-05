@@ -12,21 +12,21 @@ import { errorMiddleware } from "./middlewares/error.js";
 const app = express()
 dotenv.config({ path: "./config/.env" });
 
-// app.use(
-//     cors({
-//         origin: [process.env.FRONTEND_URL],
-//         method: ["GET", "POST", "DELETE", "PUT"],
-//         credentials: true,
-//         })
-// );
-
 app.use(
-  cors({
-      origin: ["https://job-seeking-s5o4-frontend.vercel.app"],
-      method: ["GET", "POST", "DELETE", "PUT"],
-      credentials: true,
-      })
+    cors({
+        origin: [process.env.FRONTEND_URL],
+        method: ["GET", "POST", "DELETE", "PUT"],
+        credentials: true,
+        })
 );
+
+// app.use(
+//   cors({
+//       origin: [`https://job-seeking-s5o4-frontend.vercel.app`],
+//       method: ["GET", "POST", "DELETE", "PUT"],
+//       credentials: true,
+//       })
+// );
 app.get("/",(req,res) => {
   res.json("Hello")
 })
