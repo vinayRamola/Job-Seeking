@@ -14,7 +14,7 @@ const app = express()
 
 app.use(
     cors({
-        origin: ["https://job-seeking-5xut.vercel.app"],
+        origin: [process.env.FRONTEND_URL],
         method: ["GET", "POST", "DELETE", "PUT"],
         credentials: true,
         allowedHeaders: ["Content-Type", "Authorization"],
