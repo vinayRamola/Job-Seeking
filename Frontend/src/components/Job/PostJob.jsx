@@ -15,7 +15,6 @@ const PostJob = () => {
   const [salaryTo, setSalaryTo] = useState("");
   const [fixedSalary, setFixedSalary] = useState("");
   const [salaryType, setSalaryType] = useState("default");
-  const apiUrl = process.env.REACT_APP_API_URL;
 
   const { isAuthorized, user } = useContext(Context);
 
@@ -33,7 +32,7 @@ const PostJob = () => {
     }
     await axios
       .post(
-        `${apiUrl}/api/v1/job/post`,
+        "https://job-seeking-5xut.vercel.app/api/v1/job/post",
         fixedSalary.length >= 4
           ? {
               title,

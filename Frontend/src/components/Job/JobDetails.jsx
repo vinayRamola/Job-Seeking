@@ -4,8 +4,6 @@ import { Link, useParams } from "react-router-dom";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { Context } from "../../main";
-const apiUrl = process.env.REACT_APP_API_URL;
-
 const JobDetails = () => {
   const { id } = useParams();
   const [job, setJob] = useState({});
@@ -15,7 +13,7 @@ const JobDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`${apiUrl}/api/v1/job/${id}`, {
+      .get(`https://job-seeking-5xut.vercel.app/api/v1/job/${id}`, {
         withCredentials: true,
       })
       .then((res) => {

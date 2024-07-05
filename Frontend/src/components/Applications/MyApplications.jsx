@@ -4,7 +4,6 @@ import axios from "axios";
 import toast from "react-hot-toast";
 import { useNavigate } from "react-router-dom";
 import ResumeModel from "./ResumeModel";
-const apiUrl = process.env.REACT_APP_API_URL;
 
 const MyApplications = () => {
   const { user } = useContext(Context);
@@ -19,7 +18,7 @@ const MyApplications = () => {
     try {
       if (user && user.role === "Employer") {
         axios
-          .get(`${apiUrl}/api/v1/application/employer/getall`, {
+          .get("https://job-seeking-5xut.vercel.app/api/v1/application/employer/getall", {
             withCredentials: true,
           })
           .then((res) => {
@@ -27,7 +26,7 @@ const MyApplications = () => {
           });
       } else {
         axios
-          .get(`${apiUrl}/api/v1/application/jobseeker/getall`, {
+          .get("https://job-seeking-5xut.vercel.app/api/v1/application/jobseeker/getall", {
             withCredentials: true,
           })
           .then((res) => {
@@ -46,7 +45,7 @@ const MyApplications = () => {
   const deleteApplication = (id) => {
     try {
       axios
-        .delete(`${apiUrl}/api/v1/application/delete/${id}`, {
+        .delete(`https://job-seeking-5xut.vercel.app/api/v1/application/delete/${id}`, {
           withCredentials: true,
         })
         .then((res) => {

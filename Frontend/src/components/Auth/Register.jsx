@@ -8,7 +8,6 @@ import { Link, Navigate } from "react-router-dom";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Context } from "../../main";
-const apiUrl = process.env.REACT_APP_API_URL;
 
 const Register = () => {
   const [email, setEmail] = useState("");
@@ -23,7 +22,7 @@ const Register = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        `${apiUrl}/api/v1/user/register`,
+        'https://job-seeking-5xut.vercel.app/api/v1/user/register',
         { name, phone, email, role, password },
         {
           headers: {

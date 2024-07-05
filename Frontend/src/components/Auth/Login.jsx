@@ -6,7 +6,6 @@ import { FaRegUser } from "react-icons/fa";
 import axios from "axios";
 import toast from "react-hot-toast";
 import { Context } from "../../main";
-const apiUrl = process.env.REACT_APP_API_URL;
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -19,7 +18,7 @@ const Login = () => {
     e.preventDefault();
     try {
       const { data } = await axios.post(
-        `${apiUrl}/api/v1/user/login`,
+        'https://job-seeking-5xut.vercel.app/api/v1/user/login',
         { email, password, role },
         {
           headers: {

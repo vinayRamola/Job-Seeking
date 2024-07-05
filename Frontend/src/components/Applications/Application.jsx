@@ -3,8 +3,6 @@ import React, { useContext, useState } from "react";
 import toast from "react-hot-toast";
 import { useNavigate, useParams } from "react-router-dom";
 import { Context } from "../../main";
-const apiUrl = process.env.REACT_APP_API_URL;
-
 const Application = () => {
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
@@ -37,7 +35,7 @@ const Application = () => {
 
     try {
       const { data } = await axios.post(
-        `${apiUrl}/api/v1/application/post`,
+        'https://job-seeking-5xut.vercel.app/api/v1/application/post',
         formData,
         {
           withCredentials: true,

@@ -17,15 +17,13 @@ import PostJob from "./components/Job/PostJob.jsx";
 import NotFound from "./components/Not Found/NotFound.jsx";
 import MyJobs from "./components/Job/MyJobs";
 
-const apiUrl = process.env.REACT_APP_API_URL;
-
 const App = () => {
   const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
   useEffect(() => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          `${apiUrl}/api/v1/user`,
+          'https://job-seeking-5xut.vercel.app/api/v1/user',
           {
             withCredentials: true,
           }
