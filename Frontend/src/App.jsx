@@ -17,7 +17,6 @@ import PostJob from "./components/Job/PostJob.jsx";
 import NotFound from "./components/Not Found/NotFound.jsx";
 import MyJobs from "./components/Job/MyJobs";
 
-require('dotenv').config();
 
 const App = () => {
   const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
