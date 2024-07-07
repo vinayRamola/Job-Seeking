@@ -17,13 +17,15 @@ import PostJob from "./components/Job/PostJob.jsx";
 import NotFound from "./components/Not Found/NotFound.jsx";
 import MyJobs from "./components/Job/MyJobs";
 
+require('dotenv').config();
+
 const App = () => {
   const { isAuthorized, setIsAuthorized, setUser } = useContext(Context);
   useEffect(() => {
     const fetchUser = async () => {
       try {
         const response = await axios.get(
-          'https://job-seeking-5xut.vercel.app/api/v1/user',
+          `${process.env.REACT_APP_API_BASE_URL}/api/v1/user`,
           {
             withCredentials: true,
           }

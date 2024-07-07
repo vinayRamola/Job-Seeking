@@ -13,7 +13,7 @@ const JobDetails = () => {
 
   useEffect(() => {
     axios
-      .get(`https://job-seeking-5xut.vercel.app/api/v1/job/${id}`, {
+      .get(`${process.env.REACT_APP_API_BASE_URL}/api/v1/job/${id}`, {
         withCredentials: true,
       })
       .then((res) => {

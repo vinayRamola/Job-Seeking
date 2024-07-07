@@ -32,7 +32,7 @@ const PostJob = () => {
     }
     await axios
       .post(
-        "https://job-seeking-5xut.vercel.app/api/v1/job/post",
+        `${process.env.REACT_APP_API_BASE_URL}/api/v1/job/post`,
         fixedSalary.length >= 4
           ? {
               title,

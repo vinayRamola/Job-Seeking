@@ -18,7 +18,7 @@ const MyJobs = () => {
     const fetchJobs = async () => {
       try {
         const { data } = await axios.get(
-          'https://job-seeking-5xut.vercel.app/api/v1/job/getmyjobs',
+          `${process.env.REACT_APP_API_BASE_URL}/api/v1/job/getmyjobs`,
           { withCredentials: true }
         );
         setMyJobs(data.myJobs);
@@ -48,7 +48,7 @@ const MyJobs = () => {
   const handleUpdateJob = async (jobId) => {
     const updatedJob = myJobs.find((job) => job._id === jobId);
     await axios
-      .put(`https://job-seeking-5xut.vercel.app/api/v1/job/update/${jobId}`, updatedJob, {
+      .put(`${process.env.REACT_APP_API_BASE_URL}/api/v1/job/update/${jobId}`, updatedJob, {
         withCredentials: true,
       })
       .then((res) => {
@@ -63,7 +63,7 @@ const MyJobs = () => {
   //Function For Deleting Job
   const handleDeleteJob = async (jobId) => {
     await axios
-      .delete(`https://job-seeking-5xut.vercel.app/api/v1/job/delete/${jobId}`, {
+      .delete(`${process.env.REACT_APP_API_BASE_URL}/api/v1/job/delete/${jobId}`, {
         withCredentials: true,
       })
       .then((res) => {

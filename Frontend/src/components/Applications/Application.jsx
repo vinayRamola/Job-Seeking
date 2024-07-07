@@ -35,7 +35,7 @@ const Application = () => {
 
     try {
       const { data } = await axios.post(
-        'https://job-seeking-5xut.vercel.app/api/v1/application/post',
+        `${process.env.REACT_APP_API_BASE_URL}/api/v1/application/post`,
         formData,
         {
           withCredentials: true,
